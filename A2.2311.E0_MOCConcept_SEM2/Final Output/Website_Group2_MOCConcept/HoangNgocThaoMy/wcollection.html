@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Winter Collection</title>
+	<!-- CSS -->
+	<link href="../HoangNgocThaoMy/css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="../HoangNgocThaoMy/css/Font-Awesome-640/css/all.css" rel="stylesheet">
+	<link href="../HoangNgocThaoMy/css/common.css" rel="stylesheet">
+	<link href="../HoangNgocThaoMy/css/wcollection.css" rel="stylesheet">
+    <!-- JAVA SCRIPT -->
+	<script src="../HoangNgocThaoMy/js/jquery-3.4.1.min.js"></script>
+	<script src="../HoangNgocThaoMy/js/popper.min.js"></script> 
+	<script src="../HoangNgocThaoMy/js/bootstrap-4.4.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mobilenavi").hide();
+			$("#blackscreen").hide();
+			$("#bgmobilesearch").hide();
+			
+			$("#triggermobilenavi").click(function(){
+				$("#mobilenavi").slideToggle();
+				$("#blackscreen").fadeToggle();
+				$("#bgmobilesearch").slideUp();
+				$("#triggermobilesearch i").removeClass("fa-xmark");
+				$("#triggermobilesearch i").addClass("fa-magnifying-glass");
+			})
+			$("#triggermobilesearch").click(function(){
+				$("#bgmobilesearch").slideToggle();
+				$("#mobilenavi").slideUp();
+				$("#blackscreen").fadeOut();
+				$("#triggermobilesearch i").toggleClass("fa-magnifying-glass fa-xmark");
+			})
+			
+			$("#blackscreen").click(function(){
+				$("#mobilenavi").slideUp();
+				$(this).fadeOut();
+			})
+		})
+	</script>
+  </head>
+  <body>
+	<div class="container-fluid" id="blackscreen"></div>
+	<!-- HEADER -->
+	<div class="container-fluid d-none d-md-block" id="bgheader">
+		<div class="container">
+			<div class="row">
+				 <div class="col-xl-4
+						  col-lg-4
+						  col-md-4" id="logo">
+			  	<a href="../DuongXuanNhi/home.html"><img src="imgs/logo.png" class="img-fluid"></a>
+			    </div><!--logo-->
+				<div class="col-xl-4
+							col-lg-4
+							col-md-4" id="searchbox">
+					<button id="searchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+					<input type="text" placeholder="Search..." id="searchfill"><!--Khung nhập dữ liệu-->
+					<!--Btn để chèn icon-->
+				</div><!--searchbox-->
+				<div class="col-xl-4 
+							col-lg-4 
+							col-md-4 icons"> 
+					<ul>
+						<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+						<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+					</ul>
+				</div><!--icons-->
+			</div>
+		</div>
+	  </div>
+	<!-- NAVI -->
+	<div class="container-fluid" id="bgnavi">
+	  	<div class="container">
+			<div class="row">
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="icon3line">
+					<ul>
+						<li><a id="triggermobilenavi"><i class="fa-regular fa-bars"></i></a></li>
+						<li><a id="triggermobilesearch"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+					</ul>
+				</div><!--icon3line-->
+				<div class="col-xl-12
+							col-lg-12
+						 	col-md-12 
+						  	d-none d-md-block" id="navi">
+			  	  <ul>
+					<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+					<li><a href="">NEWS</a></li>
+					<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+					<li><a href="../HoangNgocThaoMy/collections.html" class="holdmenu">COLLECTIONS</a></li>
+					<li><a href="../TranVoMyAnh/product.html">PRODUCTS</a></li>
+					<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+				  </ul>
+			    </div><!--navi-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="logomobile">
+					<a href="../DuongXuanNhi/home.html"><img src="imgs/logo.png" class="img-fluid"></a>
+				</div><!--logomobile-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="iconbox">
+				<ul>
+				  	<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+					<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+				</ul>
+			</div><!--iconbox-->
+			</div>
+		</div>
+	  </div>
+	<!--MOBILE NAVI-->
+	<div class="container-fluid" id="mobilenavibg">
+	  	<div class="row">
+			<div class="col-sm-12 col-12 d-md-none" id="mobilenavi">
+				<ul>
+					<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+					<li><a href="../TranVoMyAnh/product.html">PRODUCTS</a></li>
+					<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+					<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+					<li><a href="">NEWS</a></li>
+					<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--MOBILE SEARCH-->
+	<div class="container-fluid" id="bgmobilesearch">
+		<div class="row">
+			<div class="col-sm-12
+						col-12" id="mobilesearch">
+				<input type="text" placeholder="Tìm kiếm..." id="mobilesearchfill">
+				<button id="mobilesearchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+			</div>
+		</div>
+	</div>
+	<!--BREADCRUMB-->
+	<div class="container-fluid" id="bgbreadcrumb">
+		<div class="container">
+		<div class="row">
+			<div class="col-xl-12
+						col-lg-12
+						col-md-12
+						col-sm-12
+						col-12" id="breadcrumb">
+				<nav aria-label="breadcrumb">
+  					<ol class="breadcrumb">
+    					<li class="breadcrumb-item" href="#">HOME</li>
+						<li class="breadcrumb-item" href="#">COLLECTIONS</li>
+    					<li class="breadcrumb-item active" aria-current="page">WINTER</li>
+  					</ol>
+				</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--CONTENT XL-MD-->
+	 <div class="container d-none d-md-block">
+	 	<div class="row">
+			<div class="col-xl-5
+						col-lg-5
+						col-md-5 img">
+				<a href=""><img src="../HoangNgocThaoMy/imgs/perfume.PNG" class="img-fluid"></a>
+			</div>
+			<div class="col-xl-7
+						col-lg-7
+						col-md-7  content">
+				<a href=""><h1>ZODIAC PERFUME</h1>
+				<p>Do you want to know which perfume will suit you the best based on your zodiac sign? You will find out with our latest ZODIAC PERFUME collection.</p></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-5
+						col-lg-5
+						col-md-5 img">
+				<a href=""><img src="../HoangNgocThaoMy/imgs/cream.PNG" class="img-fluid"></a>
+			</div>
+			<div class="col-xl-7
+						col-lg-7
+						col-md-7 content">
+				<a href=""><h1>VEGAN HEALTHY CREAM</h1>
+				<p>Say bye to dry skin this winter season. It is not always late to get started taking care of your skin from the root.</p>
+				</a>
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-5
+						col-lg-5
+						col-md-5 img">
+				<a href="essence.html"><img src="../HoangNgocThaoMy/imgs/item1.PNG" class="img-fluid"></a>
+			</div>
+			<div class="col-xl-7
+						col-lg-7
+						col-md-7
+						col-sm-12
+						col-12 content">
+				<a href="essence.html"><h1>MỘC ESSENCE&nbsp;<i class="fa-solid fa-heart heart"></i></h1>
+				<p>MỘC ESSENCE collection is only available in MỘC Concept. We are honored to introduce this special collection with our exclusive formula.</p></a>
+			</div>
+		</div>
+		<div class="row">
+					<div class="col-xl-4 offset-xl-4
+								col-lg-4 offset-lg-4
+								col-md-4 offset-md-4
+								col-sm-6 offset-sm-3
+								col-6 offset-3 showmorebtn">
+						<ul>
+						<li><a href=""><h4>SHOW MORE</h4></a></li>
+						</ul>
+					</div><!---show more button--->
+		</div>
+	 </div>
+	<!--CONTENT SM-XS-->
+	 <div class="container d-md-none">
+	 	<div class="row">
+			<div class="col-sm-12
+						col-12 content">
+				<a href=""><h1>ZODIAC PERFUME</h1></a>
+			</div>
+			<div class="col-sm-12
+						col-12 img">
+				<a href=""><img src="../HoangNgocThaoMy/imgs/perfume.PNG" class="img-fluid"></a>
+			</div>	
+		</div>
+		 <div class="row">
+			<div class="col-sm-12
+						col-12 content">
+				<a href=""><h1>VEGAN HEALTHY CREAM</h1></a>
+			</div>
+			<div class="col-sm-12
+						col-12 img">
+				<a href=""><img src="../HoangNgocThaoMy/imgs/cream.PNG" class="img-fluid"></a>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-sm-12
+						col-12 content">
+				<a href="essence.html"><h1>MỘC ESSENCE&nbsp;<i class="fa-solid fa-heart heart"></i></h1></a>
+			</div>
+			<div class="col-sm-12
+						col-12 img">
+				<a href="essence.html"><img src="../HoangNgocThaoMy/imgs/item1.PNG" class="img-fluid"></a>
+			</div>	
+		</div>
+		<div class="row">
+					<div class="col-xl-4 offset-xl-4
+								col-lg-4 offset-lg-4
+								col-md-4 offset-md-4
+								col-sm-6 offset-sm-3
+								col-6 offset-3 showmorebtn">
+						<ul>
+						<li><a href=""><h4>SHOW MORE</h4></a></li>
+						</ul>
+					</div><!---show more button--->
+		</div>
+	 </div>
+	<!--EVENT-->
+	<div class="container-fluid" id="bgsub">
+		<div class="container">
+			<div class="row justify-content-center">
+		 		 <div class="col-xl-12
+							 col-lg-12
+							 col-md-10
+							 col-sm-12
+							 col-12 pagename" >
+					 <a href=""><h1>SPECIAL EVENT WINTER 2024</h1></a>
+					 <p>Only for Customers buy and review MỘC Concept on social networking platforms.</p>
+					 <div class="row">
+					<div class="col-xl-4 offset-xl-4
+								col-lg-4 offset-lg-4
+								col-md-4 offset-md-4
+								d-none d-md-block" id="discoverbtn">
+						<ul>
+						<li><a href=""><h4>DISCOVER</h4></a></li>
+						</ul>
+					</div><!---show more button--->
+		</div>
+		 		 </div><!--pagename-->
+	    	</div>
+		</div>
+	</div>
+	<!--FOOTER-->
+	<div class="container-fluid" id="bgfooter">
+	<div class="container">
+		<div class="row" id="contentfooter">
+		<div class="col-xl-5
+					col-lg-5
+					col-md-5
+					col-sm-5
+					col-12" id="contentfooter1">
+			<p class="tieudefooter"><b>About Us</b></p>
+		<ul>
+			<li><a href="../NguyenMinhHoang/Brandstory.html">Brand Story</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="../NguyenMinhHoang/Distributor.html">Agency</a></li>
+				</ul>
+			</div>
+		<div class="col-xl-4 offset-xl-0
+					col-lg-4 offset-lg-0
+					col-md-4 offset-md-0
+					col-sm-4 offset-sm-0
+					col-12 offset-0" id="contentfooter2">
+			<p class="tieudefooter"><b>Support</b></p>
+			<ul>
+			<li><a href="">Customer Service</a></li>
+				<li><a href="">Policies</a></li>
+				</ul>
+			</div>
+		<div class="col-xl-3
+					col-lg-3
+					col-md-3
+					col-sm-3
+					col-12" id="contentfooter3">
+				<p class="tieudefooter"><b>Payment</b></p>
+			<ul>
+			<li><a href="">Register</a></li>
+				<li><a href="">Payment and Delivery</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="row" id="copyright">
+			<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="tagcopyright"><p>Mộc Concept LTD.CO Since 2016</p>
+				</div>
+			<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="iconcopyright">
+			<ul>
+			<li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+			<li><a href=""><i class="fa-solid fa-comments"></i></a></li>
+			<li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+			</ul></div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

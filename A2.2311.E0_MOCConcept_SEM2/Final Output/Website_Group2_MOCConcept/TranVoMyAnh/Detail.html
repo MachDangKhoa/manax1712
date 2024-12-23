@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Detail</title>
+	<!-- Bootstrap -->
+	<link href="../TranVoMyAnh/css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="../TranVoMyAnh/css/Font-Awesome-640/css/all.css" rel="stylesheet">
+	<link href="../TranVoMyAnh/css/common.css" rel="stylesheet">
+	<link href="../TranVoMyAnh/css/detail moc.css" rel="stylesheet">
+	<link href="../TranVoMyAnh/js/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="../TranVoMyAnh/js/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<!-- JavaScript -->
+	<script src="../TranVoMyAnh/js/jquery-3.4.1.min.js"></script>
+	<script src="../TranVoMyAnh/js/popper.min.js"></script>
+	<script src="../TranVoMyAnh/js/bootstrap-4.4.1.js"></script>
+	<script src="../TranVoMyAnh/js/owlcarousel/owl.carousel.min.js"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#mobilenavi").hide();
+		$("#blackscreen").hide();
+		$("#bgmobilesearch").hide();
+		$("#productdescription").hide();
+		$("#ingredient").hide();
+		$("#more").hide();
+
+		$("#triggermobilenavi").click(function () {
+			$("#mobilenavi").slideToggle();
+			$("#blackscreen").fadeToggle();
+			$("#bgmobilesearch").slideUp();
+			$("#triggermobilesearch i").removeClass("fa-xmark");
+			$("#triggermobilesearch i").addClass("fa-magnifying-glass");
+		})
+		$("#triggermobilesearch").click(function () {
+			$("#bgmobilesearch").slideToggle();
+			$("#mobilenavi").slideUp();
+			$("#blackscreen").fadeOut();
+			$("#triggermobilesearch i").toggleClass("fa-magnifying-glass fa-xmark");
+		})
+
+		$("#blackscreen").click(function () {
+			$("#mobilenavi").slideUp();
+			$(this).fadeOut();
+		})
+
+		$("#smallimg img").click(function () {
+			var linkimg = $(this).attr("src");
+			$("#smallimg img").removeClass("clickimg");
+			$(this).addClass("clickimg");
+			$("#bigimg img").fadeOut(250, function () {
+				$("#bigimg img").attr("src", linkimg);
+				$(this).fadeIn(250);
+			})
+		})
+
+		$("#triggerdescription").click(function () {
+			$("#productdescription").slideToggle();
+
+		})
+		$("#triggeringre").click(function () {
+			$("#ingredient").slideToggle();
+
+		})
+		$("#triggermore").click(function () {
+			$("#more").slideToggle();
+
+		})
+
+		$(".owl-carousel").owlCarousel({
+			items: 4,
+			loop: true,
+			dots: false,
+			autoplay: true,
+			autoplayTimeout: 2500,
+			autoplayHoverPause: true,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 2,
+					autoplayTimeout: 3500,
+				},
+				576: {
+					items: 2,
+					autoplayTimeout: 3500,
+				},
+				768: {
+					items: 3,
+				},
+				992: {
+					items: 4,
+				},
+				1200: {
+					items: 4,
+				},
+			}
+		})
+		$('.owl-prev').click(function () {
+			$(".owl-carousel").trigger('prev.owl.carousel');
+		});
+
+		$('.owl-next').click(function () {
+			$(".owl-carousel").trigger('next.owl.carousel');
+		});
+	})
+</script>
+
+<body>
+	<div class="container-fluid" id="blackscreen"></div>
+	<!-- HEADER -->
+	<div class="container-fluid d-none d-md-block" id="bgheader">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-4
+						  col-lg-4
+						  col-md-4" id="logo">
+					<a href="../DuongXuanNhi/home.html"><img src="IMGS/imgs/logo.png" class="img-fluid"></a>
+				</div><!--logo-->
+				<div class="col-xl-4
+							col-lg-4
+							col-md-4" id="searchbox">
+					<button id="searchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+					<input type="text" placeholder="Search..." id="searchfill"><!--Khung nhập dữ liệu-->
+					<!--Btn để chèn icon-->
+				</div><!--searchbox-->
+				<div class="col-xl-4 
+							col-lg-4 
+							col-md-4 icons">
+					<ul>
+						<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+						<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+					</ul>
+				</div><!--icons-->
+			</div>
+		</div>
+	</div>
+	<!-- NAVI -->
+	<div class="container-fluid" id="bgnavi">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="icon3line">
+					<ul>
+						<li><a id="triggermobilenavi"><i class="fa-regular fa-bars"></i></a></li>
+						<li><a id="triggermobilesearch"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+					</ul>
+				</div><!--icon3line-->
+				<div class="col-xl-12
+							col-lg-12
+						 	col-md-12 
+						  	d-none d-md-block" id="navi">
+					<ul>
+						<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+						<li><a href="">NEWS</a></li>
+						<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+						<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+						<li><a href="../TranVoMyAnh/product.html" class="holdmenu">PRODUCTS</a></li>
+						<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+					</ul>
+				</div><!--navi-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="logomobile">
+					<a href="../DuongXuanNhi/home.html"><img src="IMGS/imgs/logo.png" class="img-fluid"></a>
+				</div><!--logomobile-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="iconbox">
+					<ul>
+						<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+						<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+					</ul>
+				</div><!--iconbox-->
+			</div>
+		</div>
+	</div>
+	<!--MOBILE NAVI-->
+	<div class="container-fluid" id="mobilenavibg">
+		<div class="row">
+			<div class="col-sm-12 col-12 d-md-none" id="mobilenavi">
+				<ul>
+					<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+					<li><a href="../TranVoMyAnh/product.html">PRODUCTS</a></li>
+					<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+					<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+					<li><a href="">NEWS</a></li>
+					<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!--mobilenavi-->
+	<!--MOBILE SEARCH-->
+	<div class="container-fluid" id="bgmobilesearch">
+		<div class="row">
+			<div class="col-sm-12
+						col-12" id="mobilesearch">
+				<input type="text" placeholder="Search..." id="mobilesearchfill">
+				<button id="mobilesearchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+			</div>
+		</div>
+	</div><!--mobilesearch-->
+
+	<!--BREADCRUMB-->
+	<div class="container-fluid" id="bgbreadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12
+						col-lg-12
+						col-md-12
+						col-sm-12
+						col-12" id="breadcrumb">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item" href="#">HOME</li>
+							<li class="breadcrumb-item active" aria-current="page">PRODUCTS</li>
+							<li class="breadcrumb-item active" aria-current="page">PERFUME</li>
+							<li class="breadcrumb-item active" aria-current="page">DIL</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div><!--breadcrumb-->
+	<!--CONTENT-->
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6
+						col-lg-6
+						col-md-12
+						col-sm-12
+						col-12" id="productimg">
+				<div class="row">
+					<div class="col-xl-12
+								col-lg-12
+								col-md-12
+								col-sm-12
+								col-12" id="bigimg">
+						<img src="../TranVoMyAnh/IMGS/Nước hoa/một đám rêu xanh.PNG" class="img-fluid">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-12
+								col-lg-12
+								col-md-12
+								col-sm-12
+								col-12" id="smallimg">
+						<img src="../TranVoMyAnh/IMGS/Nước hoa/một đám rêu xanh.PNG" class="img-fluid">
+						<img src="../TranVoMyAnh/IMGS/Nước hoa/một đám rêu xanh 3.jpg" class="img-fluid">
+						<img src="../TranVoMyAnh/IMGS/Nước hoa/một đám rêu xanh 5.jpg" class="img-fluid">
+						<img src="../TranVoMyAnh/IMGS/Nước hoa/một đám rêu xanh 4.jpg" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6
+						  col-lg-6
+						  col-md-12
+						  col-sm-12
+						  col-12" id="detailproduct">
+				<div class="col-xl-12
+								col-lg-12
+								col-md-12
+								col-sm-12
+								col-12">
+					<h1>Dil</h1>
+				</div>
+				<div class="col-xl-12
+								col-lg-12
+								col-md-12
+								col-sm-12
+								col-12">
+					<p>50ml</p>
+					<h4 id="price">800.000VND</h4><br>
+				</div>
+				<div class="clearfix"></div>
+				<div class="col-xl-12
+							  col-lg-12
+							  col-md-12
+							  col-sm-12
+							  col-12 detail">
+					<div class="row">
+						<div class="col-xl-12
+								  col-lg-12
+								  col-md-12
+								  col-sm-12
+								  col-12 detailcontent">
+							<a id="triggerdescription">
+								<div class="row">
+									<h6>Product Description</h6>
+								</div>
+							</a>
+							<div class="clearfix"></div>
+							<form id="productdescription">
+								<div class="detailhori">
+									<p>"Dil" is the story of a day just after the rain, about the awakening of the ancient forest after a
+										long sleep, carrying with it the moist and wild atmosphere. With every step on the damp leaves, you
+										can feel the fresh, green breath of moss mingling with the scent of wet earth, bringing a sense of
+										renewal, like the forest's deep sigh after the first rain of the season. As the giants gently
+										tremble, shaking off the heavy droplets from their leaves and stretching to greet the returning
+										sunlight, the soft wood scent gradually becomes dry and strong again, restoring the forest's
+										distinctive fragrance—a scent both rustic and sacred. <br><br>Fragrance notes: Sandalwood, moss,
+										cedarwood, coriander, lime, and ginger.</p>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xl-12
+								  col-lg-12
+								  col-md-12
+								  col-sm-12
+								  col-12 detailcontent">
+							<a id="triggeringre">
+								<div class="row">
+									<h6>Ingredient</h6>
+								</div>
+							</a>
+							<div class="clearfix"></div>
+							<form id="ingredient">
+								<div class="detailhori">
+									<p>Alcohol Denat, Fragrance/Parfum, Linalool, Limonene, Geraniol, Isoeugenol, Citral, Color</p>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xl-12
+								  col-lg-12
+								  col-md-12
+								  col-sm-12
+								  col-12 detailcontent">
+							<a id="triggermore">
+								<div class="row">
+									<h6>More description</h6>
+								</div>
+							</a>
+							<div class="clearfix"></div>
+							<form id="more">
+								<div class="detailhori">
+									<p>Lime
+										Cedarwood, Sandalwool, Ginger, Coriander,Moss<br>
+										The product can be refilled after use.</p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-5 offset-xl-1
+								col-lg-5 offset-lg-1
+							    col-md-5 offset-md-1
+								col-sm-5 offset-sm-1
+							    col-5 offset-1" id="addtocartbtn">
+						<ul>
+							<li><a href="">
+									<h5>Add to Cart</h5>
+								</a></li>
+						</ul>
+					</div>
+					<div class="col-xl-5 
+								  col-lg-5
+								  col-md-5
+								  col-sm-5
+								  col-5" id="buynowbtn">
+						<ul>
+							<li><a href="">
+									<h5>Buy Now</h5>
+								</a></li>
+						</ul>
+					</div>
+				</div>
+			</div><!--detail product-->
+		</div><!--row-->
+		<div class="row">
+			<div class="col-xl-12
+					  col-lg-12
+					  col-md-12
+					  col-sm-12
+					  col-12" id="maybeulike">
+				<h4>Perhaps you'll like</h4>
+			</div>
+		</div>
+
+		<div class="container position-relative">
+			<div class="row owl-carousel owl-theme">
+				<div class="col-xl-12
+						  col-lg-12
+						  col-md-12
+						  col-sm-12
+						  col-12 productbox">
+					<img src="../TranVoMyAnh/IMGS/Tinh chất/tinh chất trà đen.PNG" class="img-thumbnail">
+					<h4>Black Tea Essence</h4>
+					<p class="content">30ml</p>
+					<h6>340.000 VND</h6>
+				</div>
+				<div class="col-xl-12
+						  col-lg-12
+						  col-md-12
+						  col-sm-12
+						  col-12 productbox">
+					<img src="../TranVoMyAnh/IMGS/Khác/gel tẩy da chết đường nâu.PNG" class="img-thumbnail">
+					<h4>Brown Sugar Lip Scrub</h4>
+					<p class="content">30g</p>
+					<h6>100.000 VND</h6>
+				</div>
+				<div class="col-xl-12
+						  col-lg-12
+						  col-md-12
+						  col-sm-12
+						  col-12 productbox">
+					<img src="../TranVoMyAnh/IMGS/Mặt nạ/mặt nạ hoa cúc sp.PNG" class="img-thumbnail">
+					<h4>Daisy Daily Mask</h4>
+					<p class="content">50g</p>
+					<h6>200.000 VND</h6>
+				</div>
+				<div class="col-xl-12
+						  col-lg-12
+						  col-md-12
+						  col-sm-12
+						  col-12 productbox">
+					<img src="../TranVoMyAnh/IMGS/kem dưỡng/kem dưỡng lô hội.PNG" class="img-thumbnail">
+					<h4>Aloe Sleeping Mask</h4>
+					<p class="content">60g</p>
+					<h6>240.000 VND</h6>
+				</div>
+				<div class="col-xl-12
+						  col-lg-12
+						  col-md-12
+						  col-sm-12
+						  col-12 productbox">
+					<img src="../TranVoMyAnh/IMGS/Nước hoa/trăng và hoa.PNG" class="img-thumbnail">
+					<h4>Clair de Lune Perfume</h4>
+					<p class="content">50ml</p>
+					<h6>800.000 VND</h6>
+				</div>
+				<div class="col-xl-12
+							col-lg-12
+							col-md-12
+							col-sm-12
+							col-12 productbox">
+					<img src="../TranVoMyAnh/IMGS/Tinh chất/tinh chất vitamin C.PNG" class="img-thumbnail">
+					<h4>Vitamin C Essence</h4>
+					<p class="content">30ml</p>
+					<h6>320.000 VND</h6>
+				</div>
+			</div>
+
+			<div class="owl-nav">
+				<button class="owl-prev btn btn-primary"><i class="fa-solid fa-chevron-left"></i></button>
+				<button class="owl-next btn btn-primary"><i class="fa-solid fa-chevron-right"></i></button>
+			</div>
+		</div>
+		<br>
+	</div>
+	<!--FOOTER-->
+	<div class="container-fluid" id="bgfooter">
+		<div class="container">
+			<div class="row" id="contentfooter">
+				<div class="col-xl-5
+					col-lg-5
+					col-md-5
+					col-sm-5
+					col-12" id="contentfooter1">
+					<p class="tieudefooter"><b>About Us</b></p>
+					<ul>
+						<li><a href="../NguyenMinhHoang/Brandstory.html">Brand Story</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="../NguyenMinhHoang/Distributor.html">Agency</a></li>
+					</ul>
+				</div>
+				<div class="col-xl-4 offset-xl-0
+					col-lg-4 offset-lg-0
+					col-md-4 offset-md-0
+					col-sm-4 offset-sm-0
+					col-12 offset-0" id="contentfooter2">
+					<p class="tieudefooter"><b>Support</b></p>
+					<ul>
+						<li><a href="">Customer Service</a></li>
+						<li><a href="">Policies</a></li>
+					</ul>
+				</div>
+				<div class="col-xl-3
+					col-lg-3
+					col-md-3
+					col-sm-3
+					col-12" id="contentfooter3">
+					<p class="tieudefooter"><b>Payment</b></p>
+					<ul>
+						<li><a href="">Register</a></li>
+						<li><a href="">Payment and Delivery</a></li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="row" id="copyright">
+				<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="tagcopyright">
+					<p>Mộc Concept LTD.CO Since 2016</p>
+				</div>
+				<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="iconcopyright">
+					<ul>
+						<li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+						<li><a href=""><i class="fa-solid fa-comments"></i></a></li>
+						<li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

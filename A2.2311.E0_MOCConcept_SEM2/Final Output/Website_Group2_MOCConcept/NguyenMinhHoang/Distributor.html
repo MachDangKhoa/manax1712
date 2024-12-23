@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Distributor</title>
+    <!-- Bootstrap -->
+	<link href="../NguyenMinhHoang/css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="../NguyenMinhHoang/css/Distri.css" rel="stylesheet">
+	 <link href="../NguyenMinhHoang/css/common.css" rel="stylesheet">
+	 <link href="../NguyenMinhHoang/Font-Awesome-640/Font-Awesome-640/css/all.css" rel="stylesheet">
+	<script src="../NguyenMinhHoang/js/jquery-3.4.1.min.js"></script>
+	<script src="../NguyenMinhHoang/js/popper.min.js"></script> 
+	<script src="../NguyenMinhHoang/js/bootstrap-4.4.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mobilenavi").hide();
+			$("#blackscreen").hide();
+			$("#bgmobilesearch").hide();
+			
+			$("#triggermobilenavi").click(function(){
+				$("#mobilenavi").slideToggle();
+				$("#blackscreen").fadeToggle();
+				$("#bgmobilesearch").slideUp();
+				$("#triggermobilesearch i").removeClass("fa-xmark");
+				$("#triggermobilesearch i").addClass("fa-magnifying-glass");
+			})
+			$("#triggermobilesearch").click(function(){
+				$("#bgmobilesearch").slideToggle();
+				$("#mobilenavi").slideUp();
+				$("#blackscreen").fadeOut();
+				$("#triggermobilesearch i").toggleClass("fa-magnifying-glass fa-xmark");
+			})
+			
+			$("#blackscreen").click(function(){
+				$("#mobilenavi").slideUp();
+				$(this).fadeOut();
+			})
+		})
+	</script>
+  </head>
+  <body>
+<div class="container-fluid" id="blackscreen"></div>
+	<!-- HEADER -->
+	<div class="container-fluid d-none d-md-block" id="bgheader">
+		<div class="container">
+			<div class="row">
+				 <div class="col-xl-4
+						  col-lg-4
+						  col-md-4" id="logo">
+			  	<a href="../DuongXuanNhi/home.html"><img src="imgs/logo.png" class="img-fluid"></a>
+			    </div><!--logo-->
+				<div class="col-xl-4
+							col-lg-4
+							col-md-4" id="searchbox">
+					<button id="searchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+					<input type="text" placeholder="Search ..." id="searchfill"><!--Khung nhập dữ liệu-->
+					<!--Btn để chèn icon-->
+				</div><!--searchbox-->
+				<div class="col-xl-4 
+							col-lg-4 
+							col-md-4 icons"> 
+					<ul>
+						<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+						<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+					</ul>
+				</div><!--icons-->
+			</div>
+		</div>
+	  </div>
+	<!-- NAVI -->
+	<div class="container-fluid" id="bgnavi">
+	  	<div class="container">
+			<div class="row">
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="icon3line">
+					<ul>
+						<li><a id="triggermobilenavi"><i class="fa-regular fa-bars"></i></a></li>
+						<li><a id="triggermobilesearch"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+					</ul>
+				</div><!--icon3line-->
+				<div class="col-xl-12
+							col-lg-12
+						 	col-md-12 
+						  	d-none d-md-block" id="navi">
+			  	  <ul>
+					<li><a href="../NguyenMinhHoang/Aboutus.html" class="holdmenu">ABOUT US</a></li>
+					<li><a href="">NEWS</a></li>
+					<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+					<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+					<li><a href="../TranVoMyAnh/product.html">PRODUCTS</a></li>
+					<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+				  </ul>
+			    </div><!--navi-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="logomobile">
+					<a href="../DuongXuanNhi/home.html"><img src="imgs/logo.png" class="img-fluid"></a>
+				</div><!--logomobile-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="iconbox">
+				<ul>
+				  	<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+					<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+				</ul>
+			</div><!--iconbox-->
+			</div>
+		</div>
+	  </div>
+	<!--MOBILE NAVI-->
+	<div class="container-fluid" id="mobilenavibg">
+	  	<div class="row">
+			<div class="col-sm-12 col-12 d-md-none" id="mobilenavi">
+				<ul>
+					<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+					<li><a href="../TranVoMyAnh/product.html">PRODUCTS</a></li>
+					<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+					<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+					<li><a href="">NEWS</a></li>
+					<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!--mobilenavi-->
+	<!--MOBILE SEARCH-->
+	<div class="container-fluid" id="bgmobilesearch">
+		<div class="row">
+			<div class="col-sm-12
+						col-12" id="mobilesearch">
+				<input type="text" placeholder="Search ..." id="mobilesearchfill">
+				<button id="mobilesearchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+			</div>
+		</div>
+	</div><!--mobilesearch-->
+	
+	<!---BANNER-->
+<div class="container-fluid" id="banner1">
+</div><!--banner-->
+<!--BREADCRUMB-->
+	<div class="container-fluid" id="bgbreadcrumb">
+		<div class="container">
+		<div class="row">
+			<div class="col-xl-12
+						col-lg-12
+						col-md-12
+						col-sm-12
+						col-12" id="breadcrumb">
+				<nav aria-label="breadcrumb">
+  					<ol class="breadcrumb">
+    					<li class="breadcrumb-item" href="#">HOME</li>
+    					<li class="breadcrumb-item active" aria-current="page">DISTRIBUTOR</li>
+  					</ol>
+				</nav>
+				</div>
+			</div>
+		</div>
+	</div><!---Breadcrumb-->
+<!---TIEU DE--->
+<div class="container">
+	<div class="row justify-content-center" id="tieude1">
+		<h2>DISTRIBUTION AGENTS</h2>
+		</div>
+	<div class="row sroom"> <!--showroom1-->
+		<div class="col-xl-6
+					col-lg-6
+					col-md-6
+					col-sm-12
+					col-12" id="showroom1">
+		</div>
+		<div class="col-xl-6 offset-0
+					col-lg-6 offset-0
+					col-md-6 offset-0
+					col-sm-12 offset-0
+					col-12 offset-0 content">
+		<div class="row diachicontent">
+			<p>Ho Chi Minh City</p>
+			</div>
+		<div class="row tieudecontent">
+			<h4>MOC CONCEPT HUNG VUONG PLAZA</h4>
+			</div>
+		<div class="row diachicontent">
+			<p>126 Hong Bang Street, 12 Ward, District 5</p>
+			</div>
+		<div class="row thoigiancontent">
+			<p>02873013528</p>
+			</div>
+		<div class="row thoigiancontent">
+			<p>09:00 - 22:00</p>
+			</div>
+		<div class="row">
+			<a href="" class="lienhebtn">Contact</a>
+			
+			</div>
+		</div>
+	</div><!--showroom1-->
+	<div class="row sroom"> <!--showroom2-->
+		<div class="col-xl-6
+					col-lg-6
+					col-md-6
+					col-sm-12
+					col-12" id="showroom2">
+			
+		</div>
+		<div class="col-xl-6 offset-0
+					col-lg-6 offset-0
+					col-md-6 offset-0
+					col-sm-12 offset-0
+					col-12 offset-0 content">
+			<div class="row diachicontent">
+			<p>Ho Chi Minh City</p>
+			</div>
+		<div class="row tieudecontent">
+			<h4>MOC CONCEPT HAI BA TRUNG</h4>
+			</div>
+		<div class="row diachicontent">
+			<p>415 Hai Ba Trung Street, Vo Thi Sau Ward, District 3</p>
+			</div>
+		<div class="row thoigiancontent">
+			<p>02873002172</p>
+			</div>
+		<div class="row thoigiancontent">
+			<p>09:00 - 22:00</p>
+			</div>
+		<div class="row">
+			<a href="" class="lienhebtn">Contact</a>
+			
+			</div>
+		</div>
+	</div><!--showroom2-->
+	<div class="row sroom"> <!--showroom3-->
+		<div class="col-xl-6
+					col-lg-6
+					col-md-6
+					col-sm-12
+					col-12" id="showroom3">
+			
+		</div>
+		<div class="col-xl-6 offset-0
+					col-lg-6 offset-0
+					col-md-6 offset-0
+					col-sm-12 offset-0
+					col-12 offset-0 content">
+			<div class="row diachicontent">
+			<p>Ha Noi City</p>
+			</div>
+		<div class="row tieudecontent">
+			<h4>MOC CONCEPT CHUA BOC</h4>
+			</div>
+		<div class="row diachicontent">
+			<p>191 Chua Boc Street, Trung Liet Ward, District Dong Da</p>
+			</div>
+		<div class="row thoigiancontent">
+			<p>02435643670</p>
+			</div>
+		<div class="row thoigiancontent">
+			<p>09:00 - 22:00</p>
+			</div>
+		<div class="row">
+			<a href="" class="lienhebtn">Contact</a>
+			
+			</div>
+		</div>
+	</div><!--showroom3-->
+</div>
+
+<!--FOOTER-->
+<div class="container-fluid" id="bgfooter">
+	<div class="container">
+		<div class="row" id="contentfooter">
+		<div class="col-xl-5
+					col-lg-5
+					col-md-5
+					col-sm-5
+					col-12" id="contentfooter1">
+			<p class="tieudefooter"><b>About Us</b></p>
+		<ul>
+			<li><a href="../NguyenMinhHoang/Brandstory.html">Brand Story</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="../NguyenMinhHoang/Distributor.html">Agency</a></li>
+				</ul>
+			</div>
+		<div class="col-xl-4 offset-xl-0
+					col-lg-4 offset-lg-0
+					col-md-4 offset-md-0
+					col-sm-4 offset-sm-0
+					col-12 offset-0" id="contentfooter2">
+			<p class="tieudefooter"><b>Support</b></p>
+			<ul>
+			<li><a href="">Customer Service</a></li>
+				<li><a href="">Policies</a></li>
+				</ul>
+			</div>
+		<div class="col-xl-3
+					col-lg-3
+					col-md-3
+					col-sm-3
+					col-12" id="contentfooter3">
+				<p class="tieudefooter"><b>Payment</b></p>
+			<ul>
+			<li><a href="">Register</a></li>
+				<li><a href="">Payment and Delivery</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="row" id="copyright">
+			<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="tagcopyright"><p>Mộc Concept LTD.CO Since 2016</p>
+				</div>
+			<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="iconcopyright">
+			<ul>
+			<li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+			<li><a href=""><i class="fa-solid fa-comments"></i></a></li>
+			<li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+			</ul></div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

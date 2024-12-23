@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+.holdmenu{
+	background-color: #6C4E31 !important;
+	color: #FFFFFF !important;
+}
+/*=====CONTENT====*/
+.img{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.content{
+	color: #000000;
+}
+.img a{
+	display: block;
+	color: #000000;
+	text-decoration: none;
+}
+.content a{
+	display: block;
+	color: #6C4E31;
+	text-decoration: none;
+}
+/*=====SUBRIBES=====*/
+#bgsub{
+	background-color: #6C4E31;
+	height: 280px;
+}
+.pagename{
+	color: #FFFFFF;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.pagename p{
+	font-size: 20px;
+	margin-top: 15px;
+}
+#subbox{
+	text-align: center;
+	height: 50px;
+	margin-top: -15px;
+	margin-bottom: 40px;
+}
+#subfill{
+	width: 88%;
+	float: left;
+	height: 50px;
+	outline: none;
+	border: solid 1pt #AAAAAA;
+	border-right: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px 0px 0px 15px;
+}
+#subbtn{
+	width: 12%;
+	float: left;
+	border: solid 1pt #AAAAAA;
+	border-left: none;
+	background-color: #FFEAC5;
+	color: #6C4E31;
+	height: 50px;
+	border-radius: 0px 15px 15px 0px;
+}
+/*=====BANNER=====*/
+#banner{
+	padding: 0px;
+}
+/*=====CONTENT 3=====*/
+#bgcontent3{
+	background-color: #f3f2ec;
+}
+.reasons{
+	height: 100px;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.reasons i{
+	font-size: 30pt;
+}
+.reasons h5{
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.reasons p{
+	color: #6C4E31;
+	margin-bottom: 40px;
+}
+/*=====ONLY X-LARGE=====*/
+@media (min-width: 1200px){
+	.content{
+	margin-top: 350px;
+}
+	#bgcontent3{
+		height: 200px;
+	}
+}
+/*=====ONLY LARGE=====*/
+@media (min-width: 992px)and (max-width: 1199px){
+	#subfill{
+		width:85%;
+	}
+	#subbtn{
+		width:15%;
+	}
+	.content{
+		text-align: center;
+		margin-top: 250px;
+	}
+	#bgcontent3{
+		height: 220px;
+	}
+}
+/*=====ONLY MEDIUM=====*/
+@media (min-width: 768px)and (max-width: 991px){
+	.pagename{
+		font-size: 20px;
+	}
+	#subfill{
+		height: 35px;
+		width:80%;
+		margin-top: -15px;
+	}
+	#subbtn{
+		height: 35px;
+		width:20%;
+		margin-top: -15px;
+	}
+	.content{
+		text-align: center;
+		margin-top: 180px;
+	}
+	.content h1{
+		font-size: 32px;
+	}
+	.reasons h5{
+	font-size: 16px;
+}
+	#bgcontent3{
+		height: 230px;
+	}
+}
+/*=====ONLY SMALL=====*/
+@media (min-width: 576px)and (max-width: 767px){
+	.content{
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: -40px;
+	}
+	#bgcontent3{
+		height: 550px;
+	}
+	.resons{
+		text-align: center;
+	}
+}
+/*=====ONLY X-SMALL=====*/
+@media (max-width: 575px){
+	.content{
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: -40px;
+	}
+	.img{
+		margin-bottom: 20px;
+	}
+	#bgcontent3{
+		height: 550px;
+	}
+}

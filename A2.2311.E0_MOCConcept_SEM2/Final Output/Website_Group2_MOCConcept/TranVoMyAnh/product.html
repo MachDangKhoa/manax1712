@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PRODUCTS</title>
+    <!-- Bootstrap -->
+	<link href="../TranVoMyAnh/css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="../TranVoMyAnh/css/Font-Awesome-640/css/all.css" rel="stylesheet">
+	<link href="../TranVoMyAnh/css/common.css" rel="stylesheet">
+	<link href="../TranVoMyAnh/css/product moc.css" rel="stylesheet">
+	<!-- JavaScript -->
+	<script src="../TranVoMyAnh/js/jquery-3.4.1.min.js"></script>
+	<script src="../TranVoMyAnh/js/popper.min.js"></script> 
+	<script src="../TranVoMyAnh/js/bootstrap-4.4.1.js"></script>
+	  
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mobilenavi").hide();
+			$("#blackscreen").hide();
+			$("#bgmobilesearch").hide();
+			$("#perfume").hide();
+			$("#skincare").hide();
+			$("#bodycare").hide();
+			$("#lipcare").hide();
+			
+			$("#triggermobilenavi").click(function(){
+				$("#mobilenavi").slideToggle();
+				$("#blackscreen").fadeToggle();
+				$("#bgmobilesearch").slideUp();
+				$("#triggermobilesearch i").removeClass("fa-xmark");
+				$("#triggermobilesearch i").addClass("fa-magnifying-glass");
+			})
+			$("#triggermobilesearch").click(function(){
+				$("#bgmobilesearch").slideToggle();
+				$("#mobilenavi").slideUp();
+				$("#blackscreen").fadeOut();
+				$("#triggermobilesearch i").toggleClass("fa-magnifying-glass fa-xmark");
+			})
+			
+			$("#blackscreen").click(function(){
+				$("#mobilenavi").slideUp();
+				$(this).fadeOut();
+			})
+			
+			$("#triggerperfume").click(function(){
+				$("#perfume").slideToggle();
+				
+			})
+			
+			$("#triggerskincare").click(function(){
+				$("#skincare").slideToggle();
+				
+			})
+			
+			$("#triggerbodycare").click(function(){
+				$("#bodycare").slideToggle();
+				
+			})
+			
+			$("#triggerlipcare").click(function(){
+				$("#lipcare").slideToggle();
+				
+			})
+		})
+	</script>
+  </head>
+	
+  <body>
+  	 <div class="container-fluid" id="blackscreen"></div>
+	<!-- HEADER -->
+	<div class="container-fluid d-none d-md-block" id="bgheader">
+		<div class="container">
+			<div class="row">
+				 <div class="col-xl-4
+						  col-lg-4
+						  col-md-4" id="logo">
+			  	<a href="../DuongXuanNhi/home.html"><img src="IMGS/imgs/logo.png" class="img-fluid"></a>
+			    </div><!--logo-->
+				<div class="col-xl-4
+							col-lg-4
+							col-md-4" id="searchbox">
+					<button id="searchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+					<input type="text" placeholder="Search..." id="searchfill"><!--Khung nhập dữ liệu-->
+					<!--Btn để chèn icon-->
+				</div><!--searchbox-->
+				<div class="col-xl-4 
+							col-lg-4 
+							col-md-4 icons"> 
+					<ul>
+						<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+						<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+					</ul>
+				</div><!--icons-->
+			</div>
+		</div>
+	  </div>
+	<!-- NAVI -->
+	<div class="container-fluid" id="bgnavi">
+	  	<div class="container">
+			<div class="row">
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="icon3line">
+					<ul>
+						<li><a id="triggermobilenavi"><i class="fa-regular fa-bars"></i></a></li>
+						<li><a id="triggermobilesearch"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+					</ul>
+				</div><!--icon3line-->
+				<div class="col-xl-12
+							col-lg-12
+						 	col-md-12 
+						  	d-none d-md-block" id="navi">
+			  	  <ul>
+					<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+					<li><a href="">NEWS</a></li>
+					<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+					<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+					<li><a href="../TranVoMyAnh/product.html" class="holdmenu">PRODUCTS</a></li>
+					<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+				  </ul>
+			    </div><!--navi-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="logomobile">
+					<a href="../DuongXuanNhi/home.html"><img src="IMGS/imgs/logo.png" class="img-fluid"></a>
+				</div><!--logomobile-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="iconbox">
+				<ul>
+				  	<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+					<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+				</ul>
+			</div><!--iconbox-->
+			</div>
+		</div>
+	  </div>
+	<!--MOBILE NAVI-->
+	<div class="container-fluid" id="mobilenavibg">
+	  	<div class="row">
+			<div class="col-sm-12 col-12 d-md-none" id="mobilenavi">
+				<ul>
+					<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+					<li><a href="../TranVoMyAnh/product.html">PRODUCTS</a></li>
+					<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+					<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+					<li><a href="">NEWS</a></li>
+					<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!--mobilenavi-->
+	<!--MOBILE SEARCH-->
+	<div class="container-fluid" id="bgmobilesearch">
+		<div class="row">
+			<div class="col-sm-12
+						col-12" id="mobilesearch">
+				<input type="text" placeholder="Search..." id="mobilesearchfill">
+				<button id="mobilesearchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+			</div>
+		</div>
+	</div><!--mobilesearch-->
+	
+	<!--BREADCRUMB-->
+	<div class="container-fluid" id="bgbreadcrumb">
+		<div class="container">
+		<div class="row">
+			<div class="col-xl-12
+						col-lg-12
+						col-md-12
+						col-sm-12
+						col-12" id="breadcrumb">
+				<nav aria-label="breadcrumb">
+  					<ol class="breadcrumb">
+    					<li class="breadcrumb-item" href="#">HOME</li>
+    					<li class="breadcrumb-item active" aria-current="page">PRODUCTS</li>
+  					</ol>
+				</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	  <div class="container">
+		<div class="row">
+			  <div class="col-xl-3
+						  col-lg-3
+						  col-md-12
+						  col-sm-12
+						  col-12" id="filter">
+				  <div class="row">
+					  <div class="col-xl-12
+								  col-lg-12
+								  col-md-12
+								  col-sm-12
+								  col-12 filtercontent" > 
+						  <div class="row"><h3>Filter</h3>
+						<hr>
+						</div>
+						  <a id="triggerperfume">
+						<div class="row"><h5>Perfume</h5>
+						</div>
+						</a>
+						<div class="clearfix"></div>
+						<form id="perfume">
+							<div class="filterhori">
+								<ul>
+									<li><a href="../TranVoMyAnh/perfume.html">All</a></li><br>
+									<li><a href="">Collections</a></li>
+								</ul>
+							</div>
+							</form>
+					  </div><!-- filter content - perfume-->
+				  </div>
+				  
+				  <div class="row">
+					  <div class="col-xl-12
+								  col-lg-12
+								  col-md-12
+								  col-sm-12
+								  col-12 filtercontent" > 
+						<a id="triggerskincare">
+						<div class="row"><h5>Skincare</h5>
+						</div>
+						</a>
+						<div class="clearfix"></div>
+						<form id="skincare">
+							<div class="filterhori">
+								<ul>
+									<li><a href="">Mask</a></li><br>
+									<li><a href="">Micellar Water</a></li><br>
+									<li><a href="">Face Cleanser</a></li><br>
+									<li><a href="">Toner</a></li><br>
+									<li><a href="">Essence</a></li><br>
+									<li><a href="">Scrub</a></li><br>
+									<li><a href="">Suncream</a></li><br>
+									<li><a href="">Cream</a></li>
+								</ul>
+							</div>
+							</form>
+					  </div><!-- filter content - Skincare-->
+				  </div>
+				  <div class="row">
+					  <div class="col-xl-12
+								  col-lg-12
+								  col-md-12
+								  col-sm-12
+								  col-12 filtercontent" > 
+						<a id="triggerbodycare">
+						<div class="row"><h5>Body Care</h5>
+						</div>
+						</a>
+						<div class="clearfix"></div>
+						<form id="bodycare">
+							<div class="filterhori">
+								<ul>
+									<li><a href="">Shampoo</a></li><br>
+									<li><a href="">Shower</a></li>
+								</ul>
+							</div>
+							</form>
+					  </div><!-- filter content - Body Care-->
+				  </div>
+				  <div class="row">
+					  <div class="col-xl-12
+								  col-lg-12
+								  col-md-12
+								  col-sm-12
+								  col-12 filtercontent" > 
+						<a id="triggerlipcare">
+						<div class="row"><h5>Lip Care</h5>
+						</div>
+						</a>
+						<div class="clearfix"></div>
+						<form id="lipcare">
+							<div class="filterhori">
+								<ul>
+									<li><a href="">Lip Balm</a></li><br>
+									<li><a href="">Lip Scrub</a></li>
+								</ul>
+							</div>
+							</form>
+					  </div><!-- filter content - Lip Care-->
+				  </div>
+		  </div>
+			  <div class="col-xl-9
+						  col-lg-9
+						  col-md-12
+						  col-sm-12
+						  col-12" id="products">
+				  <div class="row">
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Tinh chất/tinh chất vitamin C.PNG" class="img-fluid">
+							  <h4 product>Vitamin C Essence</h4>
+							  <p class="content">30ml<br><b>340.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Nước hoa/bình mực bực mình.PNG" class="img-fluid">
+							  <h4 product>Furia de Tinta Perfume</h4>
+							  <p class="content">50ml <br><b> 800.000 VND</b> </p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Sữa rửa mặt/sữa rửa mặt diếp cá.PNG" class="img-fluid">
+							  <h4 product>Fish Mint Face Cleanser</h4>
+							  <p class="content">180g<br><b>320.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/kem dưỡng/kem dưỡng trà xanh.PNG" class="img-fluid">
+							  <h4 product>Green Tea Night Cream</h4>
+							  <p class="content">50g<br><b>280.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Khác/dầu gội gừng.jpg" class="img-fluid">
+							  <h4 product>Ginger Shampoo</h4>
+							  <p class="content">200ml<br><b>200.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Tinh chất/tinh chất trà đen.PNG" class="img-fluid">
+							  <h4 product>Black Tea Essence</h4>
+							  <p class="content">30ml<br><b>490.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Nước hoa/những kẻ say sưa.PNG" class="img-fluid">
+							  <h4 product>Junkie Perfume</h4>
+							  <p class="content">50g<br><b>280.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Mặt nạ/mặt nạ bơ sp.PNG" class="img-fluid">
+							  <h4 product>Avocado Mask</h4>
+							  <p class="content">100g<br><b>220.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Tinh chất/tinh chất nấm linh chi.PNG" class="img-fluid">
+							  <h4 product>Ganoderma Mushroom Essence</h4>
+							  <p class="content">30ml<br><b>380.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Khác/tẩy da chết môi đường nâu.PNG" class="img-fluid">
+							  <h4 product>Brown Sugar Lip Scrub</h4>
+							  <p class="content">30g<br><b>100.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Khác/sữa tắm trà tràm.PNG" class="img-fluid">
+							  <h4 product>Tea Tree Shower Gel</h4>
+							  <p class="content">200ml<br><b>240.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+					  <div class="col-xl-4
+								  col-lg-4
+								  col-md-4
+								  col-sm-6
+								  col-6 productbox">
+						  <a href=""><img src="../TranVoMyAnh/IMGS/Khác/son dưỡng dầu và bơ.PNG" class="img-fluid">
+							  <h4 product>Avocado Oil Lip Balm</h4>
+							  <p class="content">10g<br><b>80.000 VND</b></p>
+							  <a href="" class="buybtn"><b>ADD TO CART</b></a>
+						  </a>
+					</div>
+				</div>
+				  <div class="row">
+					<div class="col-xl-4 offset-xl-4
+								col-lg-4 offset-lg-4
+								col-md-4 offset-md-4
+								col-sm-6 offset-sm-3
+								col-6 offset-3" id="showmorebtn">
+						<ul>
+						<li><a href=""><h4>Show more</h4></a></li>
+						</ul>
+					</div><!---show more button--->
+				</div>
+			</div>
+	  	</div>
+		  </div>
+	<!--FOOTER-->
+<div class="container-fluid" id="bgfooter">
+	<div class="container">
+		<div class="row" id="contentfooter">
+		<div class="col-xl-5
+					col-lg-5
+					col-md-5
+					col-sm-5
+					col-12" id="contentfooter1">
+			<p class="tieudefooter"><b>About Us</b></p>
+		<ul>
+			<li><a href="../NguyenMinhHoang/Brandstory.html">Brand Story</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="../NguyenMinhHoang/Distributor.html">Agency</a></li>
+				</ul>
+			</div>
+		<div class="col-xl-4 offset-xl-0
+					col-lg-4 offset-lg-0
+					col-md-4 offset-md-0
+					col-sm-4 offset-sm-0
+					col-12 offset-0" id="contentfooter2">
+			<p class="tieudefooter"><b>Support</b></p>
+			<ul>
+			<li><a href="">Customer Service</a></li>
+				<li><a href="">Policies</a></li>
+				</ul>
+			</div>
+		<div class="col-xl-3
+					col-lg-3
+					col-md-3
+					col-sm-3
+					col-12" id="contentfooter3">
+				<p class="tieudefooter"><b>Payment</b></p>
+			<ul>
+			<li><a href="">Register</a></li>
+				<li><a href="">Payment and Delivery</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="row" id="copyright">
+			<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="tagcopyright"><p>Mộc Concept LTD.CO Since 2016</p>
+				</div>
+			<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="iconcopyright">
+			<ul>
+			<li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+			<li><a href=""><i class="fa-solid fa-comments"></i></a></li>
+			<li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+			</ul></div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	
+  </body>
+</html>

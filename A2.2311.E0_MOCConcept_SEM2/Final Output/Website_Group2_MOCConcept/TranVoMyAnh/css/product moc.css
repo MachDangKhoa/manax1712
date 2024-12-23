@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+/*===BREADCRUMB===*/
+.holdmenu{
+	background-color: #6C4E31 !important;
+	color: #FFFFFF !important;
+}
+#filter{
+	margin-top: 20px;
+}
+.filterbox h4{
+	float: left;
+}
+.filterbox i{
+	float: left;
+	margin-top: 15px;
+	margin-left: 5px;
+}
+.filtercontent{
+	color: #6C4E31;
+	margin-bottom: 8px;
+}
+.filterhori ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.filterhori ul li{
+	display: block;
+	float: left;
+}
+.filterhori ul li a{
+	display: block;
+	text-decoration: none;
+	color: #6C4E31;
+}
+.buybtn{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	background-color: #FFEAC5;
+	color: #6C4E31;
+	font-size: 16px;
+	padding-top: 6px;
+	width: 150px;
+	height: 50px;
+	transition: all ease .5s;
+	border-radius: 15px/15px;
+	margin-left: 5%;
+}
+#products{
+	margin-bottom: 40px;
+}
+.productbox {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.productbox a{
+	display: block;
+	color: #000000;
+	text-decoration: none;
+	padding:5%;
+}
+.productbox img{
+	padding-bottom: 5%;
+}
+
+#showmorebtn{
+	margin-top: 30px;
+	height: 60px;
+}
+#showmorebtn ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#showmorebtn ul li{
+	display: block;
+	float: left;
+}
+#showmorebtn ul li a{
+	display: block;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	color: #6C4E31;
+	padding-left: 25px;
+	border: solid 2pt #6C4E31;
+}
+/*XL*/
+@media (min-width:1200px){
+	#showmorebtn ul li a{
+	padding-right: 60px;
+	padding-left: 60px;
+	padding-top: 12px;	
+	padding-bottom: 12px;
+	border-radius: 15px/15px;
+	}
+	#showmorebtn ul li a:hover{
+	color: #FFFFFF;
+	background-color:#6C4E31;
+	transition: all ease .5s;
+}
+	.filterhori ul li a:hover{
+	color: #000000;
+	transition: all ease .3s;
+}	
+	.buybtn:hover{
+	text-decoration: none;
+	background-color:#6C4E31;
+	color:#FFFFFF;
+	transition: all ease .5s;
+}
+}
+/*LG*/
+@media (min-width:992px) and (max-width: 1199px){
+	#showmorebtn ul li a{
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-top: 12px;	
+	padding-bottom: 12px;
+	border-radius: 15px/15px;
+	}
+	#showmorebtn ul li a:hover{
+	color: #FFFFFF;
+	background-color:#6C4E31;
+	transition: all ease .5s;
+}
+	.filterhori ul li a:hover{
+	color: #000000;
+	transition: all ease .3s;
+}	
+	.buybtn:hover{
+	text-decoration: none;
+	background-color:#6C4E31;
+	color:#FFFFFF;
+	transition: all ease .5s;
+}
+	
+}
+/*MD*/
+@media (min-width:768px) and (max-width: 991px){
+	#showmorebtn ul li a{
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-top: 12px;	
+	padding-bottom: 12px;	
+	border-radius: 15px/15px;
+	}
+	#filter{
+		margin-left: 25px;
+	}
+}
+/*SM*/
+@media (min-width:576px) and (max-width: 767px){
+	#showmorebtn ul li a{
+	padding-right: 53px;
+	padding-left: 53px;
+	padding-top: 12px;	
+	padding-bottom: 12px;	
+	border-radius: 15px/15px;
+	}
+	#filter{
+	margin-left: 25px;
+	}
+	
+}
+/*XS*/
+@media (max-width: 575px){
+	#showmorebtn ul li a{
+	padding-right: 28px;
+	padding-left: 28px;
+	padding-top: 8px;	
+	padding-bottom: 5px;	
+	border-radius: 15px/15px;
+	}
+	#filter{
+		margin-left: 30px;
+	}
+}

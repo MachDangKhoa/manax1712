@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*====FOOTER===*/
+#bgfooter{
+	background-color: #6c4e31;
+	color: #FFFFFF;
+	padding-bottom: 40px;
+	padding-top: 15px;
+}
+#bgfooter hr{
+	border: solid 1pt #FFFFFF;
+}
+#contentfooter1 ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#contentfooter1 ul li a{
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+	transition: all ease .5s;
+	margin-top: 10px;
+}
+#contentfooter1 ul li a:hover{
+	color: #000000;
+	transition: all ease .5s;
+}
+#contentfooter2 ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#contentfooter2 ul li a{
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+	transition: all ease .5s;
+	margin-top: 10px;
+}
+#contentfooter2 ul li a:hover{
+	color: #000000;
+	transition: all ease .5s;
+}
+#contentfooter3{
+	padding-top: 0px;
+}
+#contentfooter3 ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#contentfooter3 ul li a{
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+	transition: all ease .5s;
+	margin-top: 10px;
+}
+#contentfooter3 ul li a:hover{
+	color: #000000;
+	transition: all ease .5s;
+}
+#copyright{
+	margin-top: 20px;
+	color: #FFFFFF;
+	margin-left: 0px;
+	font-size: 13px;
+	margin-bottom:0px;
+}
+#tagcopyright{
+	padding-left: 0px;
+}
+#copyright ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	
+}
+#copyright ul li a{
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	transition: all ease .5s;
+	margin-top: -10px;
+}
+#copyright ul li a:hover{
+	color: #000000;
+	transition: all ease .5s;
+}
+
+.tieudefooter{
+	font-size: 20px;
+	margin-top: 10px;
+}
+#linefooter{
+	font-size: 5px;
+	color: #FFFFFF;
+}
+/*====ONLY XLARGE===*/
+@media (min-width: 768px){
+	#copyright ul li a{
+		float: right;
+		margin-left: 10px;
+	}
+}
+/*===ONLY LARGE===*/
+@media (min-width: 420px) and (max-width: 767px){
+	#copyright ul li a{
+		float: right;
+		margin-left: 10px;
+	}
+}
+/*===ONLY XSMALL===*/
+@media (max-width: 419px){
+	#copyright ul li a{
+		float:left;
+		margin-right: 10px;
+	}
+	#iconcopyright{
+		margin-left: -15px;
+	}
+}

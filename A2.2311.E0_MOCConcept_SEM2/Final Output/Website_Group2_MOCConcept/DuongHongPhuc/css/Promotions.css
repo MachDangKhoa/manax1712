@@ -1,0 +1,289 @@
+@charset "utf-8";
+/* CSS just for Promotions*/
+body {
+    overflow-x:hidden;
+}
+.pagename {
+  color: #6c4e31;
+}
+.full-background {
+  background-size: cover;
+  background-position: center;
+  color: white;
+height: 200px!important;
+}
+.container-fluid {
+  padding: 0;
+}
+ 
+#khuyen-mai {
+  background-image: url( "../imgs/pngtree-christmas-plant-gold-color-ball-five-pointed-star-decoration-background-image_794984.jpg");
+  
+}
+
+#km2 {
+  background-image: url("../imgs/z5886963863007_24c527033fb7b19c6e6d093592f9dcda.jpg");
+}
+
+#km3 {
+  background-image: url("../imgs/1159b24ade42eae.png");
+}
+
+#km4 {
+  background-image: url("../imgs/pngtree-vietnam-national-day-2nd-september-illustration-vector-png-image_13010882.png");
+}
+#km5 {
+  background-image: url( "../imgs/background-8-3-5.png");
+}
+#km6 {
+  background-image: url( "../imgs/pngtree-yellow-lanterns-watermelon-and-rice-dumplings-vietnamese-new-year-background-image_557854.jpg");
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.btn-prima {
+  transition: background-color 0.3s;
+  outline: none !important; ;
+}
+
+.btn-prima:hover {
+  outline: none;
+}
+ 
+button.btn-md {
+  background-color: rgba(255, 255, 255, 1) !important;
+  color: #6c4e31;
+  font-weight: bold;
+background-color:#FFEAC5!important;
+}
+
+button.btn-md:hover {
+  background-color: #6c4e31 !important;
+   
+  transition: 0.2s ease-in-out;
+  color: #ffffff;
+}
+
+ 
+
+button.btn-md:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+button.test {
+  width: 19vh !important;
+  background-color: #FFFFFF !important;
+  color:#6c4e31 ;
+  font-weight: bold;
+  margin-top: 45px;
+  margin-bottom: 0px!important;
+  border: 1pt solid rgb(108, 78, 49)!important;
+}
+
+button.test:hover {
+  
+  color: #FFFFFF;
+  transform: scale(0.9);
+  transition: 0.2s ease-in-out;
+  margin-top: 45px;
+  margin-bottom: 0px!important;
+}
+
+button.test:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.holdmenu {
+  background-color: #6c4e31 !important;
+  color: #ffffff !important;
+}
+ 
+/*XL*/
+@media (min-width: 1200px) {
+  .full-background {
+    height: 550px!important;
+  }
+
+  .overlay {
+    padding: 20px;
+  }
+
+  .btn-prima {
+    margin-bottom: 200px!important;
+	  border-radius: 15px/15px;
+  }
+
+  .flex-column h6 {
+    margin-top: 390px!important;
+  }
+
+  button.btn-lg {
+    width: 24vh;
+    border-radius: 15px/15px;
+  }
+
+  button.btn-lg:hover {
+    border: 3px solid rgba(0, 0, 0, 0);
+  }
+  button.test {
+    width: 150px!important;
+    border-radius: 15px/15px;
+  }
+}
+
+/*LG*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .full-background {
+    height: 500px!important;
+  }
+
+  .overlay {
+    padding: 18px;
+  }
+
+  .btn-prima {
+    margin-bottom: 160px!important;
+  }
+
+  .flex-column h6 {
+    margin-top: 290px!important;
+  }
+
+  button.btn-lg {
+    width: 22vh;
+    border-radius: 15px/15px;
+  }
+
+  button.btn-lg:hover {
+    border: 3px solid rgba(0, 0, 0, 0);
+  }
+  button.test {
+    width: 150px!important;
+    border-radius: 15px/15px;
+  }
+}
+
+/*MD*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .full-background {
+    height: 400px!important;
+  }
+
+  .overlay {
+    padding: 16px;
+  }
+
+  .btn-prima {
+    margin-bottom: 150px!important;
+	  border-radius: 15px/15px;
+  }
+
+  .flex-column h6 {
+    margin-top: 210px!important;
+  }
+
+  button.btn-lg {
+    width: 20vh;
+    border-radius: 15px/15px;
+  }
+
+  button.btn-lg:hover {
+    border: 2px solid rgba(0, 0, 0, 0);
+  }
+  button.test {
+    width: 140px!important;
+    border-radius: 15px/15px;
+  }
+}
+
+/*SM*/
+@media (min-width: 576px) and (max-width: 767px) {
+	#mobilenavi ul li a {
+     
+    padding-left: 30px; 
+  }
+  .full-background {
+    height: 300px!important;
+  }
+
+  .overlay {
+    padding: 14px;
+  }
+
+  .btn-prima {
+    margin-bottom: 20px!important;
+	  border-radius: 15px/15px;
+  }
+
+  .flex-column h6 {
+    margin-top: 50px!important;
+  }
+
+  button.btn-lg {
+    width: 18vh;
+    border-radius: 15px/15px;
+  }
+
+  button.btn-lg:hover {
+    border: 2px solid rgba(0, 0, 0, 0);
+  }
+  button.test {
+    width: 120px!important;
+    border-radius: 15px/15px;
+  }
+}
+
+/*XS*/
+@media (max-width: 575px) {
+	#mobilenavi ul li a {
+     
+    padding-left: 30px; 
+  }
+  .full-background {
+    height: 290px!important;
+  }
+
+  .overlay {
+    padding: 12px;
+  }
+
+  .btn-prima {
+    margin-bottom: 20px!important;
+	border-radius: 15px/15px;
+  }
+
+  .flex-column h6 {
+    margin-top: 30px!important;
+  }
+
+  button.btn-lg {
+    width: 100px!important;
+    border-radius: 15px/15px;
+  }
+
+  button.btn-lg:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  button.test {
+    width: 120px!important;
+    border-radius: 15px/15px;
+  }
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PROMOTIONS</title>
+	<!-- Bootstrap -->
+	<link href="../DuongHongPhuc/css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="../DuongHongPhuc/css/common.css" rel="stylesheet">
+	<link href="../DuongHongPhuc/css/Promotions.css" rel="stylesheet">
+	<link href="../DuongHongPhuc/css/Font-Awesome-640/css/all.css" rel="stylesheet">
+	<script src="../DuongHongPhuc/js/jquery-3.4.1.min.js"></script>
+	<script src="../DuongHongPhuc/js/popper.min.js"></script>
+	<script src="../DuongHongPhuc/js/bootstrap-4.4.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#mobilenavi").hide();
+			$("#blackscreen").hide();
+			$("#bgmobilesearch").hide();
+
+			$("#triggermobilenavi").click(function () {
+				$("#mobilenavi").slideToggle();
+				$("#blackscreen").fadeToggle();
+				$("#bgmobilesearch").slideUp();
+				$("#triggermobilesearch i").removeClass("fa-xmark");
+				$("#triggermobilesearch i").addClass("fa-magnifying-glass");
+			})
+			$("#triggermobilesearch").click(function () {
+				$("#bgmobilesearch").slideToggle();
+				$("#mobilenavi").slideUp();
+				$("#blackscreen").fadeOut();
+				$("#triggermobilesearch i").toggleClass("fa-magnifying-glass fa-xmark");
+			})
+
+			$("#blackscreen").click(function () {
+				$("#mobilenavi").slideUp();
+				$(this).fadeOut();
+			})
+		})
+	</script>
+
+</head>
+
+<body> 
+	     
+	<div class="container-fluid" id="blackscreen"></div>
+	<!-- HEADER -->
+	<div class="container-fluid d-none d-md-block" id="bgheader">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-4
+						  col-lg-4
+						  col-md-4" id="logo">
+					<a href="../DuongXuanNhi/home.html"><img src="imgs/logo.png" class="img-fluid"></a>
+				</div><!--logo-->
+				<div class="col-xl-4
+							col-lg-4
+							col-md-4" id="searchbox">
+					<button id="searchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+					<input type="text" placeholder="Search..." id="searchfill"><!--Khung nhap du lieu-->
+					<!--Btn de chen icon-->
+				</div><!--searchbox-->
+				<div class="col-xl-4 
+							col-lg-4 
+							col-md-4 icons">
+					<ul>
+						<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+						<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+					</ul>
+				</div><!--icons-->
+			</div>
+		</div>
+	</div>
+	<!-- NAVI -->
+	<div class="container-fluid" id="bgnavi">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="icon3line">
+					<ul>
+						<li><a id="triggermobilenavi"><i class="fa-regular fa-bars"></i></a></li>
+						<li><a id="triggermobilesearch"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+					</ul>
+				</div><!--icon3line-->
+				<div class="col-xl-12
+							col-lg-12
+						 	col-md-12 
+						  	d-none d-md-block" id="navi">
+					<ul>
+						<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+						<li><a href="">NEWS</a></li>
+						<li><a href="../DuongHongPhuc/Promotions.html" class="holdmenu">PROMOTIONS</a></li>
+						<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+						<li><a href="../TranVoMyAnh/product.html">PRODUCTS</a></li>
+						<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+					</ul>
+				</div><!--navi-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="logomobile">
+					<a href="../DuongXuanNhi/home.html"><img src="imgs/logo.png" class="img-fluid"></a>
+				</div><!--logomobile-->
+				<div class="col-sm-4
+						  col-4
+						  d-md-none" id="iconbox">
+					<ul>
+						<li><a href="../DuongXuanNhi/user.html"><i class="fa-solid fa-user"></i></a></li>
+						<li><a href="../DuongXuanNhi/shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+					</ul>
+				</div><!--iconbox-->
+			</div>
+		</div>
+	</div>
+	<!--MOBILE NAVI-->
+	<div class="container-fluid" id="mobilenavibg">
+		<div class="row">
+			<div class="col-sm-12 col-12 d-md-none" id="mobilenavi">
+				<ul>
+					<li><a href="../DuongXuanNhi/home.html">HOME</a></li>
+					<li><a href="../TranVoMyAnh/product.html">PRODUCTS</a></li>
+					<li><a href="../HoangNgocThaoMy/collections.html">COLLECTIONS</a></li>
+					<li><a href="../DuongHongPhuc/Promotions.html">PROMOTIONS</a></li>
+					<li><a href="">NEWS</a></li>
+					<li><a href="../NguyenMinhHoang/Aboutus.html">ABOUT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!--mobilenavi-->
+	<!--MOBILE SEARCH-->
+	<div class="container-fluid" id="bgmobilesearch">
+		<div class="row">
+			<div class="col-sm-12
+						col-12" id="mobilesearch">
+				<input type="text" placeholder="Search..." id="mobilesearchfill">
+				<button id="mobilesearchbtn"><i class="fa-regular fa-magnifying-glass"></i></button>
+			</div>
+		</div>
+	</div><!--mobilesearch-->
+
+	<!--BREADCRUMB-->
+		<div class="container-fluid" id="bgbreadcrumb">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12
+						col-lg-12
+						col-md-12
+						col-sm-12
+						col-12" id="breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+				<li class="breadcrumb-item" href="#">HOME</li>
+				<li class="breadcrumb-item active" aria-current="page">PROMOTIONS</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--PROMOTIONS-->
+	<div class="container mt-3">
+		<div class="row">
+			<div class="col-12 text-left">
+				<h4 class="text-uppercase pagename">Promotions</h4>
+				<hr class="w-100 border border-dark my-3">
+				<p class="text-muted">Updated 20/12/2024</p>
+			</div>
+		</div>
+	</div>
+
+	<!--BANNER--> 
+	<div class="container-fluid mt-3 mb-4">
+		<!-- Promotion sections -->
+
+			<div class="row mb">
+				<div class="col-12">
+					<div id="khuyen-mai" class="full-background text-center">
+						<div class="overlay d-flex flex-column">
+							<h6>24/12</h6>
+							<h3>X-MAS</h3>
+							<a href="Xmas.html">
+								<button class="btn btn-prima btn-md">
+									<span>DISCOVER</span>
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb">
+				<div class="col-12">
+					<div id="km2" class="full-background text-center">
+						<div class="overlay d-flex flex-column">
+							<h6>20/10</h6>
+							<h3>VIETNAM WOMEN'S DAY</h3>
+							<a href="Promotions.html"> <button class="btn btn-prima btn-md">
+								 DISCOVER
+							</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb">
+				<div class="col-12">
+					<div id="km3" class="full-background text-center">
+						<div class="overlay d-flex flex-column">
+							<h6>17/9</h6>
+							<h3>MID AUTUMN FESTIVAL</h3>
+							<a href="Promotions.html"><button class="btn btn-prima btn-md">
+								DISCOVER
+							</button>
+								</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb">
+				<div class="col-12">
+					<div id="km4" class="full-background text-center">
+						<div class="overlay d-flex flex-column">
+							<h6>2/9</h6>
+							<h3>VIETNAM INDEPENDENCE DAY</h3>
+							<a href="Promotions.html"><button class="btn btn-prima btn-md">
+								DISCOVER
+							</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb">
+				<div class="col-12">
+					<div id="km5" class="full-background text-center">
+						<div class="overlay d-flex flex-column">
+							<h6>8/3</h6>
+							<h3>WOMEN'S DAY</h3>
+							<a href="Promotions.html"><button class="btn btn-prima btn-md">
+								DISCOVER
+								</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mb">
+				<div class="col-12">
+					<div id="km6" class="full-background text-center">
+						<div class="overlay d-flex flex-column">
+							 
+							<h6> </h6>
+							<h3>TET</h3>
+							<a href="Promotions.html"><button class="btn btn-prima btn-md">
+								DISCOVER
+							</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			 
+
+		<!-- View more button -->
+		<div class="row mb-5">
+			<div class="col-12 text-center">
+				<a href="Promotions.html"><button class="btn btn-prima btn-md test">
+								<h12>VIEW MORE</h12>
+							</button>
+					</a>
+			</div>
+		</div>
+	</div>
+
+	<!--FOOTER-->
+	<div class="container-fluid" id="bgfooter">
+		<div class="container">
+			<div class="row" id="contentfooter">
+				<div class="col-xl-5
+					col-lg-5
+					col-md-5
+					col-sm-5
+					col-12" id="contentfooter1">
+					<p class="tieudefooter"><b>About Us</b></p>
+					<ul>
+						<li><a href="../NguyenMinhHoang/Brandstory.html">Brand Story</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="../NguyenMinhHoang/Distributor.html">Agency</a></li>
+					</ul>
+				</div>
+				<div class="col-xl-4 offset-xl-0
+					col-lg-4 offset-lg-0
+					col-md-4 offset-md-0
+					col-sm-4 offset-sm-0
+					col-12 offset-0" id="contentfooter2">
+					<p class="tieudefooter"><b>Support</b></p>
+					<ul>
+						<li><a href="">Customer Service</a></li>
+						<li><a href="">Policies</a></li>
+					</ul>
+				</div>
+				<div class="col-xl-3
+					col-lg-3
+					col-md-3
+					col-sm-3
+					col-12" id="contentfooter3">
+					<p class="tieudefooter"><b>Payment</b></p>
+					<ul>
+						<li><a href="">Register</a></li>
+						<li><a href="">Payment and Delivery</a></li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="row" id="copyright">
+				<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="tagcopyright">
+					<p>Mộc Concept LTD.CO Since 2016</p>
+				</div>
+				<div class="col-xl-6
+						col-lg-6
+						col-md-6
+						col-sm-6
+						col-12" id="iconcopyright">
+					<ul>
+						<li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+						<li><a href=""><i class="fa-solid fa-comments"></i></a></li>
+						<li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

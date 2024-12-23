@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS ABOUT US */
+.holdmenu{
+	background-color: #6C4E31 !important;
+	color: #FFFFFF !important;
+}
+/* BANNER */
+#banner1{
+	height: 600px;
+	background-color: aqua;
+}
+/* Content1 */
+#bgcontent1{
+	padding-top: 20px;
+	text-align: center;
+	color: #6C4E31;
+}
+/* BANNER 2 */
+#banner2{
+	height: 500px;
+	background-color: aqua;
+}
+/* Content2 */
+#bgcontent2{
+	padding-top: 20px;
+	text-align: center;
+	color: #6C4E31;
+}
+/* BANNER 3 */
+#banner3{
+	height: 500px;
+	background-color: aqua;
+}
+/* CONTENT 3*/
+#bgcontent3{
+	padding-top: 20px;
+	text-align: center;
+	color: #6C4E31;
+}
+/*=====ONLY X-LARGE=====*/
+@media (min-width: 1200px){
+#banner1{
+	height:700px;
+	background-image: url("../imgs/Banner2.jpeg.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+}
+#banner2{
+	height: 600px;
+	background-image: url("../imgs/Banner2.jpeg");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+	#banner3{
+	height: 600px;
+	background-image: url("../imgs/Banner4.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+}
+/*=====ONLY LARGE=====*/
+@media (min-width: 992px)and (max-width: 1199px){
+	#banner1{
+	height:600px;
+	background-image: url("../imgs/Banner2.jpeg.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+}
+#banner2{
+	height: 500px;
+	background-image: url("../imgs/Banner2.jpeg");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+	#banner3{
+	height: 500px;
+	background-image: url("../imgs/Banner4.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+}
+/*=====ONLY MEDIUM=====*/
+@media (min-width: 768px)and (max-width: 991px){
+#banner1{
+	height:500px;
+	background-image: url("../imgs/Banner2.jpeg.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+}
+#banner2{
+	height: 400px;
+	background-image: url("../imgs/Banner2.jpeg");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+	#banner3{
+	height: 400px;
+	background-image: url("../imgs/Banner4.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+}
+/*=====ONLY SMALL=====*/
+@media (min-width: 576px)and (max-width: 767px){
+	#banner1{
+	height:400px;
+	background-image: url("../imgs/Banner2.jpeg.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+}
+#banner2{
+	height: 300px;
+	background-image: url("../imgs/Banner2.jpeg");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+	#banner3{
+	height: 300px;
+	background-image: url("../imgs/Banner4.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+}
+/*===ONLY smartphone===*/
+@media (max-width: 576px){
+	#banner1{
+	height: 300px;
+	background-image: url("../imgs/Banner2.jpeg.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+	#banner2{
+	height: 300px;
+	background-image: url("../imgs/Banner2.jpeg");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+	#banner3{
+	height: 300px;
+	background-image: url("../imgs/Banner4.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+}

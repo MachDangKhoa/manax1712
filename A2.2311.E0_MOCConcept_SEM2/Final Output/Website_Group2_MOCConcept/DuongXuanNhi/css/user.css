@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS danh cho user */
+
+
+label {
+    display: block;
+	padding-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+	color: #6c4e31;
+}
+
+input[type="email"], input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #6c4e31;
+    border-radius: 4px ;
+	color: #6c4e31;
+	
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 14px;
+    text-align: right;
+    color: #6c4e31;
+    text-decoration: none;
+	margin-top: -10px;
+}
+.forgot-password:hover {
+	
+    color: #FFEAC5;
+	text-decoration: none;
+}
+
+.signin-button {
+    background-color: #FFEAC5; 
+	color: #6c4e31;
+    padding: 10px; 
+    border: none; 
+    border-radius: 15px/15px; 
+    cursor: pointer; 
+    width: 100%; 
+    font-size: 16px; 
+}
+
+.signin-button:hover {
+    background-color: #6c4e31;
+	color: #FFFFFF;
+}
+
+p{
+	text-align: center;
+	padding-top: 10px;
+}
+a{
+	text-align: center;
+	color: #6c4e31;
+	padding-top: 10px;
+	transition: all ease .5s;
+	text-decoration: underline;
+}
+a:hover{
+	color: #FFEAC5;
+	transition: all ease .5s;
+	text-decoration: none;
+}
+
+/*=====ONLY X-LARGE=====*/
+@media (min-width: 1200px){
+	.login{
+	text-align: center;
+	padding-top: 30px;
+	color: #6c4e31;
+	padding-bottom: 30px;
+}
+}
+/*=====ONLY LARGE=====*/
+@media (min-width: 992px)and (max-width: 1199px){
+	.login{
+	text-align: center;
+	padding-top: 30px;
+	color: #6c4e31;
+	padding-bottom: 30px;
+}
+  	
+}
+/*=====ONLY MEDIUM=====*/
+@media (min-width: 768px)and (max-width: 991px){
+.login{
+	text-align: center;
+	padding-top: 30px;
+	color: #6c4e31;
+	padding-bottom: 30px;
+}
+}
+/*=====ONLY SMALL=====*/
+@media (min-width: 576px)and (max-width: 767px){
+.login{
+	text-align: center;
+	padding-top: 80px;
+	color: #6c4e31;
+	padding-bottom: 30px;
+}
+}
+/*=====ONLY X-SMALL=====*/
+@media (max-width: 575px){
+	.login{
+	text-align: center;
+	padding-top: 80px;
+	color: #6c4e31;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+}

@@ -1,0 +1,233 @@
+@charset "utf-8";
+/* CSS dành riêng cho home */
+.pagename{
+	text-align: center;
+	padding-top: 50px;
+	color: #6C4E31;
+	padding-bottom: 20px;
+}
+.pagename h5{
+	transition: all ease 0.5s;
+	text-decoration: underline;
+}
+.pagename h5:hover{
+	color: #A97C51;
+	transition: all ease 0.5s;
+	text-decoration: underline;
+}
+.collection p{
+	font-size: 14px;
+	transition: all ease 0.5s;
+	text-align: center;
+	color: #6C4E31;
+}
+.collection p:hover{
+	color: #A97C51;
+	transition: all ease 0.5s;
+}
+
+.buybtn{
+	color: #6C4E31;
+	border-radius: 15px/15px;
+	font-size: 16px;
+	text-decoration: none;
+	transition: all ease 0.5s;
+	padding: 2px 10px 5px 10px;
+	background-color: #FFEAC5;
+}
+
+
+.collection h4{
+	text-align: center;
+	padding-top: 8px;
+	font-size: 20px;
+	color: #6c4e31;
+}
+.productbox p{
+	font-size: 14px;
+	color: #6c4e31;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+}
+.original-price {
+    text-decoration: line-through;
+    color: #6c4e31 ;
+    margin-right: 10px; 
+    font-size: 20px;
+	padding-left: 15px;
+}
+.discounted-price {
+    color: #FF0004;
+    font-weight: normal;
+    font-size: 24px;
+	padding-left: 15px;
+}
+.gia{
+	margin-top: 0px;
+	padding-left: 20px;
+	color: #6c4e31;
+}
+
+/*=====ONLY X-LARGE=====*/
+@media (min-width: 1200px){
+	.buybtn:hover{
+		color: #FFFFFF;
+		background-color: #6c4e31;
+		transition: all ease 0.5s;
+		text-decoration: none;
+	}	
+	#banner2{
+	height: 650px;
+	margin-top: 30px;
+	background-image: url("../imgs/Banner4.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;}
+	
+	.addtocart{
+	margin-top: 10px;
+	padding-left: 35px;
+}
+	
+	.tensanpham h4{
+	margin-top: 10px;
+	padding-left: 35px;
+	color: #6c4e31;
+}
+	
+	p{
+	margin-bottom: 0px !important;
+}
+}
+/*=====ONLY LARGE=====*/
+@media (min-width: 992px)and (max-width: 1199px){
+	.buybtn:hover{
+		color: #FFFFFF;
+		background-color: #6c4e31;
+		transition: all ease 0.5s;
+		text-decoration: none;
+		
+	}	
+	#banner2{
+	height: 550px;
+	margin-top: 30px;
+	background-image: url("../imgs/Banner4.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;}
+	
+	.addtocart{
+	margin-top: 10px;
+	padding-left: 35px;
+}
+	
+	.tensanpham h4{
+	margin-top: 10px;
+	padding-left: 35px;
+	padding-right: 10px;
+	color: #6c4e31;
+}
+	
+	p{
+	margin-bottom: 0px !important;
+}
+}
+/*=====ONLY MEDIUM=====*/
+@media (min-width: 768px)and (max-width: 991px){
+	#banner2{
+	height: 450px;
+	margin-top: 30px;
+	background-image: url("../imgs/Banner4.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;}
+	.buybtn:hover{
+		color: #6C4E31;
+		background-color: #ffffff;
+		transition: all ease 0.5s;
+		text-decoration: none;
+		border: solid 1pt #6C4E31;
+		
+	}	
+	.addtocart{
+	margin-top: 10px;
+	padding-left: 35px;
+	padding-bottom: 10px;
+}
+	
+	.tensanpham h4{
+	margin-top: 10px;
+	padding-left: 35px;
+	padding-right: 10px;
+	color: #6c4e31;
+}
+	p{
+	margin-bottom: 10px !important;
+}
+}
+/*=====ONLY SMALL=====*/
+@media (min-width: 576px)and (max-width: 767px){
+	#banner2{
+	height: 350px;
+	margin-top: 30px;
+	background-image: url("../imgs/Banner4.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;}
+	.addtocart{
+	margin-top: 10px;
+	padding-left: 35px;
+	padding-bottom: 10px;
+}.buybtn:hover{
+		color: #6C4E31;
+		background-color: #ffffff;
+		transition: all ease 0.5s;
+		text-decoration: none;
+		border: solid 1pt #6C4E31;
+		
+	}
+	
+	.tensanpham h4{
+	margin-top: 10px;
+	padding-left: 35px;
+	padding-right: 10px;
+	color: #6c4e31;
+}
+	p{
+	margin-bottom: 0px !important;
+}
+}
+/*=====ONLY X-SMALL=====*/
+@media (max-width: 575px){
+	#banner2{
+	height: 350px;
+	margin-top: 30px;
+	background-image: url("../imgs/Banner4.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;}
+	.addtocart{
+	margin-top: 10px;
+	padding-left: 35px;
+	padding-bottom: 10px;
+}
+	.buybtn:hover{
+		color: #6C4E31;
+		background-color: #ffffff;
+		transition: all ease 0.5s;
+		text-decoration: none;
+		border: solid 1pt #6C4E31;
+		
+	}
+	
+	.tensanpham h4{
+	margin-top: 10px;
+	padding-left: 35px;
+	padding-right: 10px;
+	color: #6c4e31;
+}
+	p{
+	margin-bottom: 0px !important;
+}
+}
